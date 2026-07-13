@@ -25,7 +25,7 @@ export default function Navbar() {
 
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal font-heading text-lg font-bold text-indigo shadow-[0_8px_20px_rgba(91,192,190,0.35)]">
                         <Image
-                            src="/images/logo.png"
+                            src="images/logo.png"
                             alt="I-Tales"
                             width={40}
                             height={40}
