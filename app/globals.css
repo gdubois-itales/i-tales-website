@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-indigo: #1C2541;
+  --color-indigo-soft: #2A3655;
+  --color-teal: #5BC0BE;
+  --color-teal-dark: #438F8D;
+  --color-teal-light: #8DDAD8;
+  --color-coral: #E8734A;
+  --color-dusk: #3A506B;
+  --color-bg-tint: #F5F8F9;
+  --color-border: #E1E7EA;
+
+  --animate-marquee: marquee 22s linear infinite;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .thread-top {
+    position: relative;
+  }
+  .thread-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            var(--color-teal) 35%,
+            var(--color-coral) 70%,
+            transparent
+    );
+    opacity: 0.55;
+  }
+  .micro-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-coral);
+    box-shadow: 0 0 12px 2px rgba(232, 115, 74, 0.14);
+  }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    color: var(--color-teal-dark);
+  }
+  .eyebrow::before {
+    content: ">";
+    font-weight: 500;
+  }
+  .eyebrow.on-dark {
+    color: var(--color-teal-light);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
