@@ -1,12 +1,10 @@
 import Filament from "@/components/ui/Filament";
-import Navbar from "@/components/layout/Navbar";
+import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-indigo pt-[90px] [clip-path:polygon(0_0,100%_0,100%_92%,0_100%)]">
+        <section className="relative overflow-hidden bg-indigo px-5 pt-[90px] md:px-8 [clip-path:polygon(0_0,100%_0,100%_92%,0_100%)]">
             <Filament path="M -18 760 C 164 640, 236 360, 436 420 C 636 480, 691 120, 927 80" />
-
-            <Navbar />
 
             <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 pb-[90px] md:grid-cols-[1.1fr_0.9fr]">
                 <div>
@@ -26,12 +24,18 @@ export default function Hero() {
                         software.
                     </p>
                     <div className="mt-8 flex gap-3.5">
-                        <button className="rounded-lg bg-teal px-7 py-3.5 text-[14.5px] font-semibold text-indigo shadow-[0_8px_24px_rgba(91,192,190,0.25)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(91,192,190,0.4)]">
+                        <Link
+                            href="/contact"
+                            className="rounded-lg bg-teal px-7 py-3.5 text-[14.5px] font-semibold text-indigo shadow-[0_8px_24px_rgba(91,192,190,0.25)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(91,192,190,0.4)]"
+                        >
                             Discuss a project
-                        </button>
-                        <button className="rounded-lg border border-white/30 px-7 py-3.5 text-[14.5px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]">
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="rounded-lg border border-white/30 px-7 py-3.5 text-[14.5px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
+                        >
                             View services
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -53,16 +57,15 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Ticker */}
-            <div className="overflow-hidden border-y border-white/10 bg-black/15 py-4">
+            <div className="-mx-5 overflow-hidden border-y border-white/10 bg-black/15 py-4 md:-mx-8">
                 <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-mono text-[13px] text-teal-light">
                     {[0, 1].map((i) => (
                         <span key={i} className="flex gap-12">
-              <span>$ java --version</span>
-              <span>$ oc get pods</span>
-              <span>$ ci/cd pipeline: passing</span>
-              <span>$ kubectl apply -f deploy.yaml</span>
-              <span>$ openshift build: success</span>
+                <span>$ java --version</span>
+                <span>$ oc get pods</span>
+                <span>$ ci/cd pipeline: passing</span>
+                <span>$ kubectl apply -f deploy.yaml</span>
+                <span>$ openshift build: success</span>
             </span>
                     ))}
                 </div>
