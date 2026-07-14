@@ -2,20 +2,20 @@ import TeamCard from "@/components/ui/TeamCard";
 
 const teamMembers = [
     {
-        initials: "AM",
-        name: "Alex Moreau",
-        role: "Java Developer · Co-founder",
+        initials: "GD",
+        name: "Gilles Dubois",
+        role: "DevOps Engineer · Founder of I-Tales",
         bio: "Java backend developer for several years, focused on clean architecture and code that stays maintainable over time.",
-        skills: ["Java", "Spring Boot", "CI/CD", "SQL"],
-        linkedin: "#",
+        skills: ["OpenShift", "Java", "Spring Boot", "CI/CD", "Kuvernetes"],
+        linkedin: "https://www.linkedin.com/in/gilles-devops/",
     },
     {
-        initials: "SD",
-        name: "Sam Dupont",
-        role: "DevOps Engineer · Co-founder",
-        bio: "Infrastructure and automation specialist, passionate about pipelines that don't wake anyone up at night.",
-        skills: ["OpenShift", "Kubernetes", "CI/CD", "Linux"],
-        linkedin: "#",
+        initials: "TT",
+        name: "Tatiana Tshinkulu",
+        role: "Developer Junior",
+        bio: "Student in IT (3rd year, EPHEC), hybrid business & IT profile.",
+        skills: ["Java", "C#", "T-SQL", "Bash", "HTML"],
+        linkedin: "https://www.linkedin.com/in/tatiana-tshinkulu/",
     },
 ];
 
@@ -42,10 +42,6 @@ export default function TeamSection() {
                             variant={index % 2 === 1 ? "teal" : "indigo"}
                         />
                     ))}
-                </div>
-
-                <div className="mt-8 inline-block rounded-md border border-dashed border-teal-dark bg-teal/10 px-4 py-2.5 font-mono text-xs text-teal-dark">
-                    {"// names, photos, bios and LinkedIn links to be replaced with the real team information"}
                 </div>
             </div>
         </section>
