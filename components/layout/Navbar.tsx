@@ -13,6 +13,7 @@ const links = [
 export default function Navbar() {
 
     const pathname = usePathname();
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/";
 
     return (
 
@@ -24,13 +25,7 @@ export default function Navbar() {
                     className="flex shrink-0 items-center gap-2 transition-opacity hover:opacity-90 md:gap-4"
                 >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo font-heading text-lg font-bold text-indigo shadow-[0_8px_20px_rgba(91,192,190,0.35)]">
-                        <Image
-                            src="/images/logo.png"
-                            alt="I-Tales"
-                            width={40}
-                            height={40}
-                            className="h-full w-full rounded-full"
-                        />
+                        <Image src={`${basePath}images/logo.png`} alt="I-Tales" width={40} height={40} />
                     </div>
 
                     <span className="whitespace-nowrap font-heading text-lg font-bold tracking-[-0.5px] text-white md:text-[24px]">
