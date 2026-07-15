@@ -29,7 +29,7 @@ const services = [
 
 export default function ExpertiseSection() {
     return (
-        <section className="px-8 py-20">
+        <section className="px-8 py-10">
             <div className="mx-auto max-w-[1100px]">
                 <div className="eyebrow">Our expertise</div>
                 <div className="thread-top mb-2 max-w-[640px] pt-4">

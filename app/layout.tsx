@@ -1,3 +1,4 @@
+import Navbar from "@/components/layout/Navbar";
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
@@ -37,7 +38,8 @@ export default function RootLayout({
           className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
       >
       <body className="flex min-h-full flex-col overflow-x-hidden bg-white font-body text-dusk">
-      {children}
+      <Navbar />
+      <main className="flex-1">{children}</main>
       </body>
       </html>
   );
