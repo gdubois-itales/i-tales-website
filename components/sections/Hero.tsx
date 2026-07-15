@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-indigo px-5 pt-[90px] md:px-8 [clip-path:polygon(0_0,100%_0,100%_92%,0_100%)]">
+        <section className="relative overflow-hidden bg-indigo px-5 md:px-8 [clip-path:polygon(0_0,100%_0,100%_92%,0_100%)]">
+
             <Filament path="M -18 760 C 164 640, 236 360, 436 420 C 636 480, 691 120, 927 80" />
 
             <div className="relative mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 pb-[90px] md:grid-cols-[1.1fr_0.9fr]">

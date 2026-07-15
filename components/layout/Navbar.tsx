@@ -15,8 +15,10 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
-            <div className="mx-auto flex h-[90px] w-full max-w-[1600px] items-center justify-between px-5 md:px-8">                {/* Logo */}
+
+        <header className="sticky top-0 z-50 bg-indigo">
+            <div className="mx-auto flex h-[90px] w-full max-w-[1600px] items-center justify-between px-5 md:px-8">
+
                 {/* Logo */}
                 <Link
                     href="/"
