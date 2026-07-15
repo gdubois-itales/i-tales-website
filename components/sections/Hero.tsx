@@ -50,7 +50,7 @@ export default function Hero() {
                     <div className="absolute bottom-[-24px] left-[-30px] w-[230px] rounded-xl bg-white px-5 py-4 font-mono text-[12.5px] text-indigo shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
                         <div className="mb-2 flex items-center">
                             <span className="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-[#3CCB6E]" />
-                            deploy → production
+                            code → customer
                         </div>
                         <div className="mb-2 opacity-60">3 services · 0 errors</div>
                         <div className="opacity-60">uptime 99.9%</div>

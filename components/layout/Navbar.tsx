@@ -20,7 +20,6 @@ export default function Navbar() {
         <header className="sticky top-0 z-50 bg-indigo">
             <div className="mx-auto flex h-[90px] w-full max-w-[1600px] items-center justify-between px-5 md:px-8">
 
-                {/* Logo */}
                 <Link
                     href="/"
                     className="flex shrink-0 items-center gap-2 transition-opacity hover:opacity-90 md:gap-4"

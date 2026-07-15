@@ -8,7 +8,7 @@ const stats = [
 
 export default function AboutSection() {
     return (
-        <section className="relative overflow-hidden bg-bg-tint px-8 py-[90px]">
+        <section className="relative overflow-hidden bg-bg-tint px-8 py-10">
             <Filament path="M -18 100 C 200 200, 273 433, 509 367 C 746 300, 818 667, 1018 767" />
 
             <div className="relative mx-auto max-w-[1100px]">
