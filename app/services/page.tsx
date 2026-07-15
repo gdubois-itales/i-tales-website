@@ -1,3 +1,5 @@
-export default function Page() {
-    return <h1>Coming soon</h1>;
+import ServicesSection from "@/components/sections/ServicesSection";
+
+export default function ServicesPage() {
+    return <ServicesSection />;
 }
