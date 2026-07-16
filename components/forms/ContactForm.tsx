@@ -1,15 +1,13 @@
 "use client";
-
 import { useState, type FormEvent } from "react";
 
-// ⚠️ À remplacer une fois le vrai Google Form créé
 const GOOGLE_FORM_ACTION_URL =
-    "https://docs.google.com/forms/d/e/REPLACE_WITH_REAL_FORM_ID/formResponse";
+    "https://docs.google.com/forms/d/e/1FAIpQLSey8N6xrw50tafQcBFDUDIXkjQFHDSbSFLHJHFpnS_DWxE_1A/formResponse";
 
 const FORM_FIELDS = {
-    name: "entry.REPLACE_ME_1",
-    email: "entry.REPLACE_ME_2",
-    message: "entry.REPLACE_ME_3",
+    name: "entry.1097415667",
+    email: "entry.227254259",
+    message: "entry.2103761266",
 };
 
 export default function ContactForm() {
@@ -60,10 +58,11 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleSubmit}>
             <div className="mb-[18px]">
-                <label className="mb-1.5 block text-[13px] font-semibold text-indigo">
+                <label htmlFor="contact-name" className="mb-1.5 block text-[13px] font-semibold text-indigo">
                     Name
                 </label>
                 <input
+                    id="contact-name"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -74,10 +73,11 @@ export default function ContactForm() {
             </div>
 
             <div className="mb-[18px]">
-                <label className="mb-1.5 block text-[13px] font-semibold text-indigo">
+                <label htmlFor="contact-email" className="mb-1.5 block text-[13px] font-semibold text-indigo">
                     Email
                 </label>
                 <input
+                    id="contact-email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -88,10 +88,11 @@ export default function ContactForm() {
             </div>
 
             <div className="mb-[18px]">
-                <label className="mb-1.5 block text-[13px] font-semibold text-indigo">
+                <label htmlFor="contact-message" className="mb-1.5 block text-[13px] font-semibold text-indigo">
                     Message
                 </label>
                 <textarea
+                    id="contact-message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Describe what you need in a few words..."
