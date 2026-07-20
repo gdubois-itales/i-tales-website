@@ -23,9 +23,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "I-Tales — Java, DevOps, CI/CD & OpenShift consulting",
-  description:
-      "IT consulting studio based in Belgium, specialized in Java, DevOps, CI/CD and OpenShift.",
+    title: {
+        default: "I-Tales — Java, DevOps, CI/CD & OpenShift consulting",
+        template: "%s — I-Tales",
+    },
+    description:
+        "IT consulting studio based in Belgium, specialized in Java, DevOps, CI/CD and OpenShift.",
 };
 
 export default function RootLayout({
