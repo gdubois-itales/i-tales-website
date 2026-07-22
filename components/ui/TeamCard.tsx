@@ -5,6 +5,7 @@ type TeamCardProps = {
     bio: string;
     skills: string[];
     linkedin: string;
+    email?: string;
     variant: "indigo" | "teal";
 };
 
@@ -15,6 +16,7 @@ export default function TeamCard({
                                      bio,
                                      skills,
                                      linkedin,
+                                     email,
                                      variant,
 }: TeamCardProps) {
 const isTeal = variant === "teal";
@@ -55,14 +57,24 @@ return (
                         </span>
                     ))}
                 </div>
+                <div className="flex flex-wrap gap-2.5">
                 <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border-[1.5px] border-indigo px-[18px] py-[9px] text-[13.5px] font-semibold text-indigo transition hover:-translate-y-0.5 hover:bg-indigo hover:text-white"
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border-[1.5px] border-indigo px-[18px] py-[9px] text-[13.5px] font-semibold text-indigo transition hover:-translate-y-0.5 hover:bg-indigo hover:text-white"
                 >
-                In LinkedIn
+                    In LinkedIn
                 </a>
+                {email && (
+                    <a
+                        href={`mailto:${email}`}
+                        className="inline-flex items-center gap-2 rounded-lg border-[1.5px] border-indigo px-[18px] py-[9px] text-[13.5px] font-semibold text-indigo transition hover:-translate-y-0.5 hover:bg-indigo hover:text-white"
+                    >
+                        Email
+                    </a>
+                )}
+                </div>
             </div>
         </div>
     );
