@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ".";
 
 export default function NotFound() {
     return (
@@ -10,12 +10,12 @@ export default function NotFound() {
             <Image
                 src={`${basePath}/images/404.png`}
                 alt="Cracked I-Tales logo symbolizing a broken page"
-                width={250}
-                height={250}
+                width={300}
+                height={300}
                 priority
             />
 
-            <div className="eyebrow on-dark text-[40px]">404</div>
+            <div className="eyebrow on-dark text-[50px]">404</div>
 
             <h1 className="font-heading text-[36px] font-bold text-white">
                 Page not found
